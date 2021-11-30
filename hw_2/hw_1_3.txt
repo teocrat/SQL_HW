@@ -1,0 +1,21 @@
+C:\Users\Serge>mysqldump example > sample.sql
+C:\Users\Serge>mysql
+mysql> CREATE DATABASE sample;
+mysql> \q;
+C:\Users\Serge>mysql sample < sample.sql
+C:\Users\Serge>mysql sample
+mysql> show tables;
++------------------+
+| Tables_in_sample |
++------------------+
+| users            |
++------------------+
+1 row in set (0.01 sec)
+mysql> describe users;
++-------+--------------+------+-----+---------+-------+
+| Field | Type         | Null | Key | Default | Extra |
++-------+--------------+------+-----+---------+-------+
+| id    | int unsigned | YES  |     | NULL    |       |
+| name  | varchar(255) | YES  |     | NULL    |       |
++-------+--------------+------+-----+---------+-------+
+2 rows in set (0.01 sec)
